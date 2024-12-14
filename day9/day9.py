@@ -23,7 +23,7 @@ while notEnd:
 # print(f"fileVal: {fileVal}")
 originalLength  = len(fileVal)
 
-# compress fileVal
+# compress fileVal by moving data into empty spot
 idx = len(fileVal) - 1
 startSearchIdx = 0
 for c in reversed(fileVal):
