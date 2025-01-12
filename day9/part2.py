@@ -46,8 +46,9 @@ for fid, size in reversed(fileVal.copy()):
         idx -= 1
         continue
     
-    emptyIdx = emptySpots[whichCapacity].pop(0)
+    emptyIdx = emptySpots[whichCapacity][0]
     if emptyIdx <= idx:
+        emptySpots[whichCapacity].pop(0)
         emptySpotsIdx[emptyIdx].append((fid, size))
         fileVal[idx] = (-1, size)
         spare = whichCapacity - size

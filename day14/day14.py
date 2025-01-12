@@ -19,7 +19,7 @@ scatter = Line2D([], [], linestyle='None', marker="o")
 ax.add_line(scatter)
 
 # tree at 20, 121, 222, 323
-for step in range(320, 326):
+for step in range(6880, 6900):
     x, y = [], []
     quadrant = [[0, 0], [0,0]]
     # oriMap = np.zeros((HEIGHT, WIDTH), dtype=int)
@@ -48,7 +48,7 @@ for step in range(320, 326):
 
     ax.set_title(f"step {step}")
     scatter.set_data(x, y)
-    plt.pause(0.1)
+    plt.pause(0.5)
 
 # print(oriMap)
 print(f"safety factor: {quadrant[0][0] * quadrant[0][1] * quadrant[1][0] * quadrant[1][1]}")
